@@ -4,6 +4,7 @@ import os
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from comandos.resultados import resultados
 from comandos.lineup import lineup
+from comandos.noticias import noticias
 
 load_dotenv()
 token = os.getenv("TELEGRAM_BOT_TOKEN")
@@ -27,6 +28,7 @@ app = ApplicationBuilder().token(token).build()
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("comandos", comandos))
 app.add_handler(CommandHandler("resultados", resultados))
-app.add_handler(CommandHandler("lineup", lineup))  # Temporariamente usando resultados para noticias
+app.add_handler(CommandHandler("lineup", lineup)) 
+app.add_handler(CommandHandler("noticias", noticias))  
 
 app.run_polling()
