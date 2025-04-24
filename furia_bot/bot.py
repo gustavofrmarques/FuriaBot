@@ -5,6 +5,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from comandos.resultados import resultados
 from comandos.lineup import lineup
 from comandos.noticias import noticias
+from comandos.ranking import ranking
 
 load_dotenv()
 token = os.getenv("TELEGRAM_BOT_TOKEN")
@@ -18,7 +19,7 @@ async def comandos(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "/noticias - Últimas noticias da FURIA\n"
         "/lineup - Atual LineUp da FURIA\n"
         "/resultados - Jogos recentes\n"
-        "/art - Perfil do jogador Art\n"
+        "/ranking - Ranking da FURIA\n"
         "/quiz - Desafie seus conhecimentos\n"
         "/surpresa - Uma surpresa especial"
     )
@@ -30,5 +31,6 @@ app.add_handler(CommandHandler("comandos", comandos))
 app.add_handler(CommandHandler("resultados", resultados))
 app.add_handler(CommandHandler("lineup", lineup)) 
 app.add_handler(CommandHandler("noticias", noticias))  
+app.add_handler(CommandHandler("ranking", ranking))
 
 app.run_polling()
