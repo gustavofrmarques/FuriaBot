@@ -6,6 +6,9 @@ from comandos.resultados import resultados
 from comandos.lineup import lineup
 from comandos.noticias import noticias
 from comandos.ranking import ranking
+from comandos.crosshair.crosshair import crosshair
+from comandos.crosshair.fallen import fallen
+
 
 load_dotenv()
 token = os.getenv("TELEGRAM_BOT_TOKEN")
@@ -20,8 +23,9 @@ async def comandos(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "/lineup - Atual LineUp da FURIA\n"
         "/resultados - Jogos recentes\n"
         "/ranking - Ranking da FURIA\n"
+        "/crosshair - aaaaaaaaaa\n"
         "/quiz - Desafie seus conhecimentos\n"
-        "/surpresa - Uma surpresa especial"
+
     )
     await update.message.reply_text(texto)
 
@@ -32,5 +36,8 @@ app.add_handler(CommandHandler("resultados", resultados))
 app.add_handler(CommandHandler("lineup", lineup)) 
 app.add_handler(CommandHandler("noticias", noticias))  
 app.add_handler(CommandHandler("ranking", ranking))
+app.add_handler(CommandHandler("crosshair", crosshair))
+app.add_handler(CommandHandler("fallen", fallen))
+
 
 app.run_polling()
