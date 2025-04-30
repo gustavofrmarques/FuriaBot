@@ -6,9 +6,12 @@ from comandos.resultados import resultados
 from comandos.lineup import lineup
 from comandos.noticias import noticias
 from comandos.ranking import ranking
-from comandos.crosshair.crosshair import crosshair
-from comandos.crosshair.fallen import fallen
-
+from comandos.configs.configs import configsLine
+from comandos.configs.fallen import fallen
+from comandos.configs.yuurih import yuurih
+from comandos.configs.yekindar import yekindar  
+from comandos.configs.kscerato import kscerato
+from comandos.configs.molody import molodoy
 
 load_dotenv()
 token = os.getenv("TELEGRAM_BOT_TOKEN")
@@ -23,7 +26,7 @@ async def comandos(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "/lineup - Atual LineUp da FURIA\n"
         "/resultados - Jogos recentes\n"
         "/ranking - Ranking da FURIA\n"
-        "/crosshair - aaaaaaaaaa\n"
+        "/ConfigsDaLine - Configurações\n"
         "/quiz - Desafie seus conhecimentos\n"
 
     )
@@ -36,8 +39,12 @@ app.add_handler(CommandHandler("resultados", resultados))
 app.add_handler(CommandHandler("lineup", lineup)) 
 app.add_handler(CommandHandler("noticias", noticias))  
 app.add_handler(CommandHandler("ranking", ranking))
-app.add_handler(CommandHandler("crosshair", crosshair))
+app.add_handler(CommandHandler("ConfigsDaline", configsLine))
 app.add_handler(CommandHandler("fallen", fallen))
+app.add_handler(CommandHandler("yuurih", yuurih))
+app.add_handler(CommandHandler("yekindar", yekindar))
+app.add_handler(CommandHandler("kscerato", kscerato))
+app.add_handler(CommandHandler("molody", molodoy))
 
 
 app.run_polling()
