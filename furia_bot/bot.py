@@ -27,7 +27,7 @@ async def comandos(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "/resultados - Jogos recentes\n"
         "/ranking - Ranking da FURIA\n"
         "/ConfigsDaLine - Configurações\n"
-        "/quiz - Desafie seus conhecimentos\n"
+        
 
     )
     await update.message.reply_text(texto)

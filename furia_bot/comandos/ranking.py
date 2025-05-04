@@ -4,7 +4,7 @@ from telegram.ext import ContextTypes
 async def ranking(update: Update, context: ContextTypes.DEFAULT_TYPE):
     texto = (
         "🏅 RANKING da FURIA \n\n"
-        "Valve Ranking: #18\n"
-        "HLTV Ranking: #16\n"
+        "Valve Ranking: #20\n"
+        "HLTV Ranking: #17\n"
     )
     await update.message.reply_text(texto)
