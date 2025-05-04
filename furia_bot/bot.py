@@ -44,7 +44,7 @@ app.add_handler(CommandHandler("fallen", fallen))
 app.add_handler(CommandHandler("yuurih", yuurih))
 app.add_handler(CommandHandler("yekindar", yekindar))
 app.add_handler(CommandHandler("kscerato", kscerato))
-app.add_handler(CommandHandler("molody", molodoy))
+app.add_handler(CommandHandler("molodoy", molodoy))
 
 
 app.run_polling()

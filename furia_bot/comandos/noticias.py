@@ -5,10 +5,10 @@ from telegram.ext import ContextTypes
 
 async def noticias(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
-        # Caminho absoluto baseado na localização deste arquivo
+        
         caminho_arquivo = os.path.join(
-            os.path.dirname(os.path.abspath(__file__)),  # /furia_bot/comandos
-            "..",  # sobe para /furia_bot
+            os.path.dirname(os.path.abspath(__file__)),  
+            "..", 
             "dados",
             "noticias.json"
         )
